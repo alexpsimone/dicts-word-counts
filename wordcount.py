@@ -1,5 +1,7 @@
 def count_words(filename):
 
+#    import pprint
+
     lines = open(filename)
     counting_words = {}
 
@@ -14,5 +16,9 @@ def count_words(filename):
             #If the word is not in the dictionary, then return 0.
             #Will add 1 after the get method is evaluated.
 
-    return counting_words
-    
+#    pprint.pprint(counting_words)
+
+    for key in counting_words:
+        print(key, counting_words[key])
+
+count_words('test.txt')
