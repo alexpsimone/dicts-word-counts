@@ -1,6 +1,14 @@
+# $python3 wordcount.py test.txt (in terminal)
+
+import sys
+
 def count_words(filename):
 
 #    import pprint
+
+    filename = sys.argv[1]
+    # sys.argv[1] = "test.txt"
+    print(sys.argv[1], filename)
 
     lines = open(filename)
     counting_words = {}
@@ -21,4 +29,6 @@ def count_words(filename):
     for key in counting_words:
         print(key, counting_words[key])
 
-count_words('test.txt')
+    filename.close()
+
+#count_words()
